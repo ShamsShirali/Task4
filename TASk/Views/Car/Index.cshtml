@@ -1,0 +1,16 @@
+﻿@model List<Car>
+
+<h1>Car Index</h1>
+
+<div class="list-group">
+    <ul class="list-group">
+        @foreach (Car cars in Model)
+        {
+            <li class="list-group-item">
+                        <a asp-controller="Car" asp-action="Details" asp-route-id="@cars.Id">
+                           @cars.Year
+                        </a>
+            </li>
+        }
+    </ul>
+</div>

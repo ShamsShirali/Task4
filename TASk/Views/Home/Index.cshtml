@@ -1,0 +1,15 @@
+﻿@model List<Marka>
+
+<h1>Marka Index</h1>
+
+<div class="list-group">
+    <ul class="list-group">
+       @foreach(Marka markas in Model){
+            <li class="list-group-item">
+                <a asp-controller="Model" asp-action="Index" asp-route-id="@markas.Id">
+                    @markas.Name
+                </a>
+            </li>
+        }
+    </ul>
+</div>

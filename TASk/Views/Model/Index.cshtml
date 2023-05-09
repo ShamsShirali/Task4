@@ -1,0 +1,16 @@
+﻿@model List<Modal>
+
+<h1>Modal Index</h1>
+
+<div class="list-group">
+    <ul class="list-group">
+        @foreach (Modal modals in Model)
+        {
+                    <li class="list-group-item">
+                        <a asp-controller="Car" asp-action="Index" asp-route-id="@modals.Id">
+                             @modals.Name
+                        </a>
+                    </li>
+        }
+    </ul>
+</div>
