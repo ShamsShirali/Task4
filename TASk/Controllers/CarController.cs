@@ -22,7 +22,7 @@ namespace TASk.Controllers
         {
             if (id != null)
             {
-                if (!_cars.Exists(s => s.Id == id))
+                if (!_cars.Exists(s => s.ModalId == id))
                 {
                     return BadRequest();
                 }
@@ -35,7 +35,7 @@ namespace TASk.Controllers
         {
             if (id == null) return BadRequest();
 
-            Car cars = _cars.Find(s => s.ModalId == id);
+            Car cars = _cars.Find(s => s.Id == id);
 
             if (cars == null) return NotFound();
 
